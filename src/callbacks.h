@@ -20,3 +20,5 @@
 #include <gtk/gtk.h>
 
 void destroy (GtkWidget *widget, gpointer data);
+
+void btnAbout_clicked (GtkButton *button, gpointer user_data);

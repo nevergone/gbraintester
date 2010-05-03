@@ -2163,6 +2163,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <signal name="clicked" handler="btnAbout_clicked"/>
                 <child>
                   <object class="GtkAlignment" id="alignment2">
                     <property name="visible">True</property>

@@ -24,6 +24,12 @@
 #include "callbacks.h"
 
 
+/* destroy application window */
 void destroy (GtkWidget *widget, gpointer data) {
 	gtk_main_quit();
+}
+
+
+/* clicked About button */
+void btnAbout_clicked (GtkButton *button, gpointer user_data) {
 }
