@@ -59,8 +59,8 @@
 /* #define UI_FILE PACKAGE_DATA_DIR"/gbraintester/ui/gbraintester.ui" */
 #define UI_FILE "src/gbraintester.ui"
 	
-GtkWidget* create_window (void) {
-	GtkWidget *window;
+GtkWidget* create_wndMain (void) {
+	GtkWidget *wndMain;
 	GtkBuilder *builder;
 	GError* error = NULL;
 
@@ -71,9 +71,9 @@ GtkWidget* create_window (void) {
 	}
 	/* This is important */
 	gtk_builder_connect_signals (builder, NULL);
-	window = GTK_WIDGET (gtk_builder_get_object (builder, "window"));
+	wndMain = GTK_WIDGET (gtk_builder_get_object (builder, "wndMain"));
 	g_object_unref (builder);
-	return window;
+	return wndMain;
 }
 
 
@@ -88,7 +88,7 @@ int main (int argc, char *argv[]) {
 	
 	gtk_set_locale ();
 	gtk_init (&argc, &argv);
-	window = create_window ();
+	window = create_wndMain ();
 	gtk_widget_show (window);
 	gtk_main ();
 	return 0;
