@@ -5,6 +5,7 @@
   <object class="GtkWindow" id="wndMain">
     <property name="title" translatable="yes">gBrainTester</property>
     <property name="resizable">False</property>
+    <signal name="destroy" handler="gtk_main_quit"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
