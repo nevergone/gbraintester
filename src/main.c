@@ -64,15 +64,15 @@ GtkWidget* create_wndMain (void) {
 	GtkBuilder *builder;
 	GError* error = NULL;
 
-	builder = gtk_builder_new ();
-	if (!gtk_builder_add_from_file (builder, UI_FILE, &error)) {
-		g_warning ("Couldn't load builder file: %s", error->message);
-		g_error_free (error);
+	builder = gtk_builder_new();
+	if (!gtk_builder_add_from_file(builder, UI_FILE, &error)) {
+		g_warning("Couldn't load builder file: %s", error->message);
+		g_error_free(error);
 	}
 	/* This is important */
-	gtk_builder_connect_signals (builder, NULL);
-	wndMain = GTK_WIDGET (gtk_builder_get_object (builder, "wndMain"));
-	g_object_unref (builder);
+	gtk_builder_connect_signals(builder, NULL);
+	wndMain = GTK_WIDGET (gtk_builder_get_object(builder, "wndMain"));
+	g_object_unref(builder);
 	return wndMain;
 }
 
@@ -81,15 +81,15 @@ int main (int argc, char *argv[]) {
  	GtkWidget *window;
 
 #ifdef ENABLE_NLS
-	bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-	textdomain (GETTEXT_PACKAGE);
+	bindtextdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
+	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+	textdomain(GETTEXT_PACKAGE);
 #endif
 	
-	gtk_set_locale ();
-	gtk_init (&argc, &argv);
-	window = create_wndMain ();
-	gtk_widget_show (window);
-	gtk_main ();
+	gtk_set_locale();
+	gtk_init(&argc, &argv);
+	window = create_wndMain();
+	gtk_widget_show(window);
+	gtk_main();
 	return 0;
 }
