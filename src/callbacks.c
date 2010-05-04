@@ -54,3 +54,8 @@ void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 	g_signal_connect(dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
 	gtk_widget_show(dialog);
 }
+
+
+/* clicked Start/Stop button */
+void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
+}

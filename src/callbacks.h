@@ -27,3 +27,5 @@ void on_wndMain_destroy (GtkWidget *widget, gpointer data);
 void on_btnAbout_clicked (GtkButton *button, gpointer user_data);
 
 void on_btnResults_clicked (GtkButton *button, gpointer user_data);
+
+void on_btnStartStop_clicked (GtkButton *button, gpointer user_data);
