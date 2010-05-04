@@ -20,7 +20,9 @@ bin_PROGRAMS = gbraintester
 gbraintester_SOURCES = \
 	callbacks.c \
 	callbacks.h \
-	main.c
+	main.c \
+	timer.c \
+	timer.h
 
 gbraintester_LDFLAGS = \
 	-Wl,--export-dynamic
