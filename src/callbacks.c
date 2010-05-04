@@ -84,3 +84,20 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 									GTK_ICON_SIZE_BUTTON);
 	}
 }
+
+
+void on_ntbTestTabs_switch_page  (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data) {
+	guint signal_id;
+	gulong handler_id;
+
+	signal_id = g_signal_lookup("switch-page", GTK_TYPE_NOTEBOOK); /* get signal_id */
+    if (signal_id > 0) { /* if valid signal id found... */
+		handler_id = g_signal_handler_find((gpointer)notebook, G_SIGNAL_MATCH_ID, signal_id, 0, 0, 0, 0);
+		if (handler_id > 0) { /* if valid handler id found... */
+			g_signal_handler_block((gpointer)notebook, handler_id);
+			gtk_widget_show_all(GTK_WIDGET (notebook));
+			gtk_notebook_set_current_page(GTK_NOTEBOOK (notebook), 0);
+			g_signal_handler_unblock((gpointer)notebook, handler_id);
+		}
+	}
+}
