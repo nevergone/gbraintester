@@ -5,7 +5,7 @@
   <object class="GtkWindow" id="wndMain">
     <property name="title" translatable="yes">gBrainTester</property>
     <property name="resizable">False</property>
-    <signal name="destroy" handler="gtk_main_quit"/>
+    <signal name="destroy" handler="wndMain_destroy"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -2204,6 +2204,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <signal name="clicked" handler="wndMain_destroy"/>
                 <child>
                   <object class="GtkAlignment" id="alignment3">
                     <property name="visible">True</property>

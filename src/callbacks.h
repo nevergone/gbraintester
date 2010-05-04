@@ -22,6 +22,6 @@
 GtkBuilder *builder;
 
 
-void destroy (GtkWidget *widget, gpointer data);
+void wndMain_destroy (GtkWidget *widget, gpointer data);
 
 void btnAbout_clicked (GtkButton *button, gpointer user_data);

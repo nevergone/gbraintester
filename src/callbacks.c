@@ -25,7 +25,7 @@
 
 
 /* destroy application window */
-void destroy (GtkWidget *widget, gpointer data) {
+void wndMain_destroy (GtkWidget *widget, gpointer data) {
 	g_object_unref(builder); /* destroy GtkBuilder object */
 	gtk_main_quit();
 }
