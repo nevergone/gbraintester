@@ -26,5 +26,5 @@
 
 /* run function by the seconds */
 extern gint estimatedTime (gpointer user_data) {
-	return TRUE; /* if TRUE, re-run this function */
+	return TRUE; /* if TRUE, re-run this timer function */
 }
