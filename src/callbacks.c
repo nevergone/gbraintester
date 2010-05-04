@@ -38,3 +38,19 @@ void btnAbout_clicked (GtkButton *button, gpointer user_data) {
 	about = GTK_WIDGET (gtk_builder_get_object(builder, "wndAbout"));
 	gtk_widget_show_all(about);
 }
+
+
+/* clicked Results button */
+void btnResults_clicked (GtkButton *button, gpointer user_data) {
+	GtkWidget *dialog, *toplevel;
+
+	toplevel = gtk_widget_get_toplevel(GTK_WIDGET (button));
+	dialog = gtk_message_dialog_new(GTK_WINDOW (toplevel),
+									GTK_DIALOG_DESTROY_WITH_PARENT,
+									GTK_MESSAGE_ERROR,
+									GTK_BUTTONS_CLOSE,
+                                    "later ..."); /* TODO */
+	/* signal: destroy dialog window */
+	g_signal_connect(dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
+	gtk_widget_show(dialog);
+}
