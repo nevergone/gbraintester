@@ -2250,6 +2250,7 @@
   </object>
   <object class="GtkAboutDialog" id="wndAbout">
     <property name="border_width">5</property>
+    <property name="modal">True</property>
     <property name="type_hint">normal</property>
     <property name="program_name">gBrainTester</property>
     <property name="comments" translatable="yes">Simple, playful brain test program</property>
@@ -2257,6 +2258,7 @@
     <property name="website_label" translatable="yes">Homepage</property>
     <property name="license" translatable="yes">GPL</property>
     <property name="authors">Kurucz Istv&#xE1;n &lt;kurucz.istvan@gmail.com&gt;</property>
+    <signal name="response" handler="gtk_widget_hide"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
