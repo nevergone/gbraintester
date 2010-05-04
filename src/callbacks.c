@@ -66,7 +66,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 	imgStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "imgStartStop"));
 	if (!timerId) {
 		/* start estimatedTime() function by the seconds */
-		timerId = g_timeout_add(1000, (GtkFunction)estimatedTime, NULL);
+		timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
 		/* change icon and label */
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Stop");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
