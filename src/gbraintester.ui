@@ -5,7 +5,7 @@
   <object class="GtkWindow" id="wndMain">
     <property name="title" translatable="yes">gBrainTester</property>
     <property name="resizable">False</property>
-    <signal name="destroy" handler="wndMain_destroy"/>
+    <signal name="destroy" handler="on_wndMain_destroy"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -567,7 +567,7 @@
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="x_options">GTK_EXPAND</property>
@@ -582,7 +582,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -599,7 +599,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -616,7 +616,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -633,7 +633,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -650,7 +650,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -667,7 +667,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -684,7 +684,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -701,7 +701,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -718,7 +718,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -735,7 +735,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">1</property>
@@ -752,7 +752,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -771,7 +771,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -790,7 +790,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -809,7 +809,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -828,7 +828,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -847,7 +847,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -866,7 +866,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -885,7 +885,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -904,7 +904,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -923,7 +923,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">2</property>
@@ -940,7 +940,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -959,7 +959,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -978,7 +978,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -997,7 +997,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1016,7 +1016,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1035,7 +1035,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1054,7 +1054,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -1073,7 +1073,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -1092,7 +1092,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -1111,7 +1111,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">3</property>
@@ -1128,7 +1128,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -1147,7 +1147,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -1166,7 +1166,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -1185,7 +1185,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1204,7 +1204,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1223,7 +1223,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1242,7 +1242,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -1261,7 +1261,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -1280,7 +1280,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -1299,7 +1299,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">4</property>
@@ -1316,7 +1316,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -1335,7 +1335,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -1354,7 +1354,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -1373,7 +1373,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1392,7 +1392,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1411,7 +1411,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1430,7 +1430,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -1449,7 +1449,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -1468,7 +1468,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -1487,7 +1487,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">5</property>
@@ -1504,7 +1504,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -1523,7 +1523,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -1542,7 +1542,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -1561,7 +1561,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1580,7 +1580,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1599,7 +1599,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1618,7 +1618,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -1637,7 +1637,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -1656,7 +1656,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -1675,7 +1675,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">6</property>
@@ -1692,7 +1692,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -1711,7 +1711,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -1730,7 +1730,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -1749,7 +1749,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1768,7 +1768,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1787,7 +1787,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1806,7 +1806,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -1825,7 +1825,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -1844,7 +1844,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -1863,7 +1863,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="top_attach">7</property>
@@ -1880,7 +1880,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -1899,7 +1899,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -1918,7 +1918,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">3</property>
@@ -1937,7 +1937,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
@@ -1956,7 +1956,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
@@ -1975,7 +1975,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">6</property>
@@ -1994,7 +1994,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">7</property>
@@ -2013,7 +2013,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">8</property>
@@ -2032,7 +2032,7 @@
                             <property name="receives_default">False</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">rbtnPosElement00</property>
-                            <signal name="clicked" handler="rbtnPosElement_clicked"/>
+                            <signal name="clicked" handler="on_rbtnPosElement_clicked"/>
                           </object>
                           <packing>
                             <property name="left_attach">9</property>
@@ -2124,7 +2124,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="btnResults_clicked"/>
+                <signal name="clicked" handler="on_btnResults_clicked"/>
                 <child>
                   <object class="GtkAlignment" id="alignment1">
                     <property name="visible">True</property>
@@ -2165,7 +2165,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="btnAbout_clicked"/>
+                <signal name="clicked" handler="on_btnAbout_clicked"/>
                 <child>
                   <object class="GtkAlignment" id="alignment2">
                     <property name="visible">True</property>
@@ -2206,7 +2206,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="wndMain_destroy"/>
+                <signal name="clicked" handler="on_wndMain_destroy"/>
                 <child>
                   <object class="GtkAlignment" id="alignment3">
                     <property name="visible">True</property>

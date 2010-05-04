@@ -25,14 +25,14 @@
 
 
 /* destroy application window */
-void wndMain_destroy (GtkWidget *widget, gpointer data) {
+void on_wndMain_destroy (GtkWidget *widget, gpointer data) {
 	g_object_unref(builder); /* destroy GtkBuilder object */
 	gtk_main_quit();
 }
 
 
 /* clicked About button */
-void btnAbout_clicked (GtkButton *button, gpointer user_data) {
+void on_btnAbout_clicked (GtkButton *button, gpointer user_data) {
 	GtkWidget *about;
 
 	about = GTK_WIDGET (gtk_builder_get_object(builder, "wndAbout"));
@@ -41,7 +41,7 @@ void btnAbout_clicked (GtkButton *button, gpointer user_data) {
 
 
 /* clicked Results button */
-void btnResults_clicked (GtkButton *button, gpointer user_data) {
+void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 	GtkWidget *dialog, *toplevel;
 
 	toplevel = gtk_widget_get_toplevel(GTK_WIDGET (button));
