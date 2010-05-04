@@ -51,7 +51,7 @@
 #  define N_(String) (String)
 #endif
 
-
+extern GtkBuilder *builder;
 
 #include "callbacks.h"
 
@@ -61,7 +61,6 @@
 	
 GtkWidget* create_wndMain (void) {
 	GtkWidget *wndMain;
-	GtkBuilder *builder;
 	GError* error = NULL;
 
 	builder = gtk_builder_new();
@@ -72,7 +71,6 @@ GtkWidget* create_wndMain (void) {
 	/* This is important */
 	gtk_builder_connect_signals(builder, NULL);
 	wndMain = GTK_WIDGET (gtk_builder_get_object(builder, "wndMain"));
-	g_object_unref(builder);
 	return wndMain;
 }
 
