@@ -36,5 +36,5 @@ void btnAbout_clicked (GtkButton *button, gpointer user_data) {
 	GtkWidget *about;
 
 	about = GTK_WIDGET (gtk_builder_get_object(builder, "wndAbout"));
-	gtk_widget_show(about);
+	gtk_widget_show_all(about);
 }
