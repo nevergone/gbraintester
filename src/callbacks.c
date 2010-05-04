@@ -23,6 +23,8 @@
 
 #include "callbacks.h"
 
+guint timerId;
+
 
 /* destroy application window */
 void on_wndMain_destroy (GtkWidget *widget, gpointer data) {
@@ -58,4 +60,27 @@ void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 
 /* clicked Start/Stop button */
 void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
+	GtkWidget *lblStartStop, *imgStartStop;
+
+	lblStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "lblStartStop"));
+	imgStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "imgStartStop"));
+	if (!timerId) {
+		/* start estimatedTime() function by the seconds */
+		timerId = g_timeout_add(1000, (GtkFunction)estimatedTime, NULL);
+		/* change icon and label */
+		gtk_label_set_label(GTK_LABEL (lblStartStop), "Stop");
+		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
+									"gtk-stop",
+									GTK_ICON_SIZE_BUTTON);
+	}
+	else {
+		/* remove timer */
+		g_source_remove(timerId);
+		timerId = 0;
+		/* change icon and label */
+		gtk_label_set_label(GTK_LABEL (lblStartStop), "Start");
+		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
+									"gtk-yes",
+									GTK_ICON_SIZE_BUTTON);
+	}
 }

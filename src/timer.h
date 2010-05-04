@@ -20,3 +20,6 @@
 #include <gtk/gtk.h>
 
 GtkBuilder *builder;
+
+
+extern gint estimatedTime (gpointer user_data);
