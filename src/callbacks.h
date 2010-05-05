@@ -18,6 +18,7 @@
  */
 
 #include <gtk/gtk.h>
+#include <strings.h>
 
 GtkBuilder *builder;
 
