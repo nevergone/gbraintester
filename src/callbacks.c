@@ -90,15 +90,20 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-stop",
 									GTK_ICON_SIZE_BUTTON);
+		/* start test */
+		g_signal_connect(ntbTestTabs, "switch-page", G_CALLBACK (on_ntbTestTabs_switch_page), NULL); /* signal connect */
 	}
 	else {
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Start");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-yes",
 									GTK_ICON_SIZE_BUTTON);
+		/* stop test */
+		g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
 	}
 }
 
 
-void on_ntbTestTabs_switch_page  (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data) {
+void on_ntbTestTabs_switch_page (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data) {
+	g_signal_stop_emission_by_name(notebook, "switch-page"); /* stop signal emission: disable switch page */
 }
