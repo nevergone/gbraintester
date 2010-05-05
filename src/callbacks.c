@@ -60,24 +60,34 @@ void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 
 /* clicked Start/Stop button */
 void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
-	GtkWidget *lblStartStop, *imgStartStop;
+	GtkWidget *lblStartStop, *imgStartStop, *ntbTestTabs;
+	gint tab_id;
+	gchar *icon_name;
 
 	lblStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "lblStartStop"));
 	imgStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "imgStartStop"));
-	if (!timerId) {
-		/* start estimatedTime() function by the seconds */
-		timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
-		/* change icon and label */
+	ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
+	tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
+	if ((tab_id == 0) || (tab_id == 2)) { /* timer required */
+		if (!timerId) {
+			/* start estimatedTime() function by the seconds */
+			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
+		}
+		else {
+			/* remove timer */
+			g_source_remove(timerId);
+			timerId = 0;
+		}
+	}
+	/* change icon and label */
+	gtk_image_get_icon_name(GTK_IMAGE (imgStartStop), (gpointer)&icon_name, NULL); /* get icon name */
+	if (g_strcmp0(icon_name, "gtk-yes") == 0) {
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Stop");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-stop",
 									GTK_ICON_SIZE_BUTTON);
 	}
 	else {
-		/* remove timer */
-		g_source_remove(timerId);
-		timerId = 0;
-		/* change icon and label */
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Start");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-yes",
