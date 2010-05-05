@@ -14,7 +14,6 @@
           <object class="GtkNotebook" id="ntbTestTabs">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <signal name="switch_page" handler="on_ntbTestTabs_switch_page"/>
             <child>
               <object class="GtkVBox" id="vbox2">
                 <property name="visible">True</property>
