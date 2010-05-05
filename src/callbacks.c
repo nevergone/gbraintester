@@ -23,6 +23,7 @@
 
 #include "callbacks.h"
 
+#define TIMER "60"
 guint timerId;
 
 
@@ -60,16 +61,18 @@ void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 
 /* clicked Start/Stop button */
 void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
-	GtkWidget *lblStartStop, *imgStartStop, *ntbTestTabs;
+	GtkWidget *lblStartStop, *imgStartStop, *ntbTestTabs, *lblTimer;
 	gint tab_id;
 	gchar *icon_name;
 
 	lblStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "lblStartStop"));
 	imgStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "imgStartStop"));
 	ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
+	lblTimer = GTK_WIDGET (gtk_builder_get_object(builder, "lblTimer"));
 	tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
 	if ((tab_id == 0) || (tab_id == 2)) { /* timer required */
 		if (!timerId) {
+			gtk_label_set_text(GTK_LABEL (lblTimer), TIMER);
 			/* start estimatedTime() function by the seconds */
 			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
 		}
@@ -77,6 +80,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 			/* remove timer */
 			g_source_remove(timerId);
 			timerId = 0;
+			gtk_label_set_text(GTK_LABEL (lblTimer), "--");
 		}
 	}
 	/* change icon and label */
