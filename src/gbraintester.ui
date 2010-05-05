@@ -2053,7 +2053,7 @@
                           <object class="GtkImage" id="imgStartStop">
                             <property name="visible">True</property>
                             <property name="xalign">0.89999997615814209</property>
-                            <property name="stock">gtk-yes</property>
+                            <property name="icon_name">gtk-yes</property>
                           </object>
                           <packing>
                             <property name="position">0</property>
