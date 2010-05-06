@@ -20,8 +20,10 @@
 #include <gtk/gtk.h>
 #include <strings.h>
 
-GtkBuilder *builder;
 
+guint timerId;
+gboolean test_running;
+GtkBuilder *builder;
 
 gint estimatedTime (gpointer user_data);
 

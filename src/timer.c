@@ -25,7 +25,7 @@
 
 /* in callback.c: TIMER - 1 */
 #define TIMER "59"
-guint timerId;
+
 
 /* run function by the seconds */
 gint estimatedTime (gpointer user_data) {

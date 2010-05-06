@@ -17,9 +17,12 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <stdlib.h>
 #include <gtk/gtk.h>
 
+
 GtkBuilder *builder;
+guint timerId;
 
 
 gint estimatedTime (gpointer user_data);

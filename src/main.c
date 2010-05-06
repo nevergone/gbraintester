@@ -22,11 +22,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
-
 #include <config.h>
-
 #include <gtk/gtk.h>
-
 
 
 /*
@@ -51,8 +48,6 @@
 #  define N_(String) (String)
 #endif
 
-GtkBuilder *builder;
-gboolean test_running;
 
 #include "callbacks.h"
 
@@ -84,7 +79,6 @@ int main (int argc, char *argv[]) {
 	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
 	textdomain(GETTEXT_PACKAGE);
 #endif
-	
 	gtk_set_locale();
 	gtk_init(&argc, &argv);
 	window = create_wndMain();

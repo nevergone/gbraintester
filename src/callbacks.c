@@ -24,8 +24,6 @@
 #include "callbacks.h"
 
 #define TIMER "60"
-guint timerId;
-gboolean test_running;
 
 
 /* destroy application window */
@@ -90,8 +88,8 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-stop",
 									GTK_ICON_SIZE_BUTTON);
-		/* start test */
 		g_signal_connect(ntbTestTabs, "switch-page", G_CALLBACK (on_ntbTestTabs_switch_page), NULL); /* signal connect */
+		/* start test */
 	}
 	else {
 		test_running = FALSE;
@@ -99,8 +97,8 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-yes",
 									GTK_ICON_SIZE_BUTTON);
-		/* stop test */
 		g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
+		/* stop test */
 	}
 }
 
