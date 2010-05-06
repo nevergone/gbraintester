@@ -22,7 +22,13 @@ gbraintester_SOURCES = \
 	callbacks.h \
 	main.c \
 	timer.c \
-	timer.h
+	timer.h \
+	shorttermmemory.c \
+	shorttermmemory.h \
+	reactiontime.c \
+	reactiontime.h \
+	positioning.c \
+	positioning.h
 
 gbraintester_LDFLAGS = \
 	-Wl,--export-dynamic
