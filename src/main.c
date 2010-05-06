@@ -52,6 +52,7 @@
 #endif
 
 extern GtkBuilder *builder;
+extern gboolean test_running;
 
 #include "callbacks.h"
 

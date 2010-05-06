@@ -25,6 +25,7 @@
 
 #define TIMER "60"
 guint timerId;
+gboolean test_running;
 
 
 /* destroy application window */
@@ -83,8 +84,8 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		}
 	}
 	/* change icon and label and start/stop test */
-	if (!g_object_get_data((gpointer)button, "test_running")) {
-		g_object_set_data((gpointer)button, "test_running", "TRUE");
+	if (!test_running) {
+		test_running = TRUE;
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Stop");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-stop",
@@ -93,7 +94,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		g_signal_connect(ntbTestTabs, "switch-page", G_CALLBACK (on_ntbTestTabs_switch_page), NULL); /* signal connect */
 	}
 	else {
-		g_object_set_data((gpointer)button, "test_running", NULL);
+		test_running = FALSE;
 		gtk_label_set_label(GTK_LABEL (lblStartStop), "Start");
 		gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 									"gtk-yes",
