@@ -24,3 +24,9 @@
 #include "reactiontime.h"
 
 
+void positioning_start() {
+}
+
+
+void positioning_stop() {
+}

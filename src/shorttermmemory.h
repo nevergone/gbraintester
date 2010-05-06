@@ -21,3 +21,5 @@
 #include <gtk/gtk.h>
 
 
+void short_term_memory_start();
+void short_term_memory_stop();

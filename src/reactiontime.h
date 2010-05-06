@@ -21,3 +21,5 @@
 #include <gtk/gtk.h>
 
 
+void reaction_time_start();
+void reaction_time_stop();

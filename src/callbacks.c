@@ -90,6 +90,17 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 									GTK_ICON_SIZE_BUTTON);
 		g_signal_connect(ntbTestTabs, "switch-page", G_CALLBACK (on_ntbTestTabs_switch_page), NULL); /* signal connect */
 		/* start test */
+		switch (tab_id) {
+			case 0:
+				short_term_memory_start();
+				break;
+			case 1:
+				reaction_time_start();
+				break;
+			case 2:
+				positioning_start();
+				break;
+		}
 	}
 	else {
 		test_running = FALSE;
@@ -99,6 +110,17 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 									GTK_ICON_SIZE_BUTTON);
 		g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
 		/* stop test */
+		switch (tab_id) {
+			case 0:
+				short_term_memory_stop();
+				break;
+			case 1:
+				reaction_time_stop();
+				break;
+			case 2:
+				positioning_stop();
+				break;
+		}
 	}
 }
 
