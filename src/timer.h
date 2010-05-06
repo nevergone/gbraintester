@@ -22,4 +22,4 @@
 GtkBuilder *builder;
 
 
-extern gint estimatedTime (gpointer user_data);
+gint estimatedTime (gpointer user_data);

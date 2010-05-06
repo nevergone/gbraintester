@@ -28,7 +28,7 @@
 guint timerId;
 
 /* run function by the seconds */
-extern gint estimatedTime (gpointer user_data) {
+gint estimatedTime (gpointer user_data) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];

@@ -51,8 +51,8 @@
 #  define N_(String) (String)
 #endif
 
-extern GtkBuilder *builder;
-extern gboolean test_running;
+GtkBuilder *builder;
+gboolean test_running;
 
 #include "callbacks.h"
 
