@@ -483,7 +483,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkTable" id="table2rbtnPosElement00">
+                      <object class="GtkTable" id="tblPosElement">
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="n_rows">8</property>
