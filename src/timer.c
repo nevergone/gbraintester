@@ -29,10 +29,10 @@
 
 /* run function by the seconds */
 gint estimatedTime (gpointer user_data) {
-	GtkWidget *lblTimer, *lblStartStop, *imgStartStop;
+	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];
-	int timer_number;
+	int timer_number, tab_id;
 
 	lblTimer = GTK_WIDGET (gtk_builder_get_object(builder, "lblTimer"));
 	timer_oldtext = gtk_label_get_text(GTK_LABEL (lblTimer));
@@ -56,6 +56,20 @@ gint estimatedTime (gpointer user_data) {
 			gtk_image_set_from_icon_name(GTK_IMAGE (imgStartStop),
 										"gtk-yes",
 										GTK_ICON_SIZE_BUTTON);
+			/* stop test */
+			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
+			tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
+			switch (tab_id) {
+				case 0:
+					short_term_memory_stop();
+					break;
+				case 1:
+					reaction_time_stop();
+					break;
+				case 2:
+					positioning_stop();
+					break;
+			}
 			return FALSE;
 		}
 	}
