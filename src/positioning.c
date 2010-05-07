@@ -21,7 +21,7 @@
 #  include <config.h>
 #endif
 
-#include "reactiontime.h"
+#include "positioning.h"
 
 
 void positioning_start() {
