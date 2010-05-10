@@ -132,5 +132,5 @@ void on_ntbTestTabs_switch_page (GtkNotebook *notebook, GtkNotebookPage *page, g
 
 
 /* clicked radiobutton in positioning test */
-void on_rbtnPosElement_clicked (GtkButton *button, gpointer user_data) {
+gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data) {
 }
