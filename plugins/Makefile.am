@@ -1,4 +1,4 @@
 SUBDIRS = 		 \
 	positioning  \
-	reactiontime
+	reactiontime \
 	shorttermmemory
