@@ -26,6 +26,3 @@ guint timerId;
 
 
 gint estimatedTime (gpointer user_data);
-void short_term_memory_stop();
-void reaction_time_stop();
-void positioning_stop();

@@ -26,12 +26,6 @@ gboolean test_running;
 GtkBuilder *builder;
 
 gint estimatedTime (gpointer user_data);
-void short_term_memory_start();
-void reaction_time_start();
-void positioning_start();
-void short_term_memory_stop();
-void reaction_time_stop();
-void positioning_stop();
 
 
 void on_wndMain_destroy (GtkWidget *widget, gpointer data);

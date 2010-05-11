@@ -59,17 +59,7 @@ gint estimatedTime (gpointer user_data) {
 			/* stop test */
 			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
 			tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
-			switch (tab_id) {
-				case 0:
-					short_term_memory_stop();
-					break;
-				case 1:
-					reaction_time_stop();
-					break;
-				case 2:
-					positioning_stop();
-					break;
-			}
+			/* TODO */
 			return FALSE;
 		}
 	}
