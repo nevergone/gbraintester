@@ -18,9 +18,9 @@ AM_CFLAGS =\
 bin_PROGRAMS = gbraintester
 
 gbraintester_SOURCES = \
+	main.c \
 	callbacks.c \
 	callbacks.h \
-	main.c \
 	timer.c \
 	timer.h
 
