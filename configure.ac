@@ -39,6 +39,7 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 po/Makefile.in
+plugins/Makefile
 plugins/positioning/Makefile
 plugins/reactiontime/Makefile
 plugins/shorttermmemory/Makefile

@@ -1,8 +1,9 @@
 # Reaction-time test
 plugindir = $(libdir)/gbraintester/plugins
 
-INCLUDES = 								\
+INCLUDES = 							\
 	-I$(top_srcdir) 					\
+	$(GBRAINTESTER_CFLAGS)					\
 	$(DEPS_CFLAGS)	 					\
 	$(WARN_CFLAGS)						\
 	$(DISABLE_DEPRECATED_CFLAGS)				
