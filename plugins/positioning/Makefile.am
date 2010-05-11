@@ -15,7 +15,7 @@ libpositioning_la_SOURCES = positioning.c \
 
 libpositioning_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 
-gladedir = $(datadir)/gbraintester/glade
+gladedir = $(datadir)/gbraintester/plugins
 glade_DATA = positioning.ui
 
 

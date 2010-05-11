@@ -15,7 +15,7 @@ libshorttermmemory_la_SOURCES = shorttermmemory.c \
 
 libshorttermmemory_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 
-gladedir = $(datadir)/gbraintester/glade
+gladedir = $(datadir)/gbraintester/plugins
 glade_DATA = shorttermmemory.ui
 
 
