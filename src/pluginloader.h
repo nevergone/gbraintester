@@ -20,3 +20,15 @@
 #include <gtk/gtk.h>
 
 
+typedef struct _Plugin_ {
+	gchar *name; /* plugin name */
+	gchar *version; /* plugin version */
+	gchar *title; /* plugin tab title */
+	guchar timer; /* timer in seconds, 0 = no timer */
+	GtkWidget *testpage; /* test page for main application */
+	GtkWidget *about; /* about window (type: GtkAboutDialog) */
+	GtkWidget *settings; /* plugin settings window */
+	gboolean (*test_start) (void); /* test start function, TRUE = success */
+	gboolean (*test_stop) (void); /* test stop function, TRUE = success */
+	gboolean (*test_running) (void); /* test running? TRUE = running */
+} TestPlugin;

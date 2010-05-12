@@ -50,6 +50,7 @@
 
 
 #include "callbacks.h"
+#include "pluginloader.h"
 
 /* For testing propose use the local (not installed) ui file */
 /* #define UI_FILE PACKAGE_DATA_DIR"/gbraintester/ui/gbraintester.ui" */
