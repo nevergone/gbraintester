@@ -21,6 +21,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <config.h>
 #include <gtk/gtk.h>
@@ -51,6 +52,7 @@
 
 #include "callbacks.h"
 #include "pluginloader.h"
+
 
 /* For testing propose use the local (not installed) ui file */
 /* #define UI_FILE PACKAGE_DATA_DIR"/gbraintester/ui/gbraintester.ui" */
@@ -84,6 +86,10 @@ int main (int argc, char *argv[]) {
 	gtk_init(&argc, &argv);
 	window = create_wndMain();
 	gtk_widget_show(window);
+	if (!plugin_loader()) { /* plugins does not work */
+	    g_error ("module not supported");
+	    return EXIT_FAILURE;
+	}
 	gtk_main();
 	return 0;
 }

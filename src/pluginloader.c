@@ -24,3 +24,10 @@
 #include "pluginloader.h"
 
 
+gboolean plugin_loader() {
+	/* if plugins not supported */
+	if (!g_module_supported())  {
+		return FALSE;
+	}
+	return TRUE;
+}
