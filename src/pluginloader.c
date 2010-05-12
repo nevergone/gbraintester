@@ -52,12 +52,9 @@ GList * plugin_list_filename (const gchar *path) {
 }
 
 gboolean plugin_loader() {
-	gchar *module_path;
 	gchar *homedir;
 	gchar *plugindir;
 	GModule *module;
-	gboolean module_result;
-	gboolean (*module_func) (void);
 	GList *plugins;
 
 	/* if plugins not supported */
