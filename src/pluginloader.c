@@ -58,6 +58,7 @@ gboolean plugin_loader() {
 	GModule *module;
 	gboolean module_result;
 	gboolean (*module_func) (void);
+	GList *plugins;
 
 	/* if plugins not supported */
 	if (!g_module_supported())  {
@@ -71,15 +72,15 @@ gboolean plugin_loader() {
 	plugin_list_filename(plugindir);
 	/* scanning PACKAGE_LIB_DIR"/gbraintester/plugins/ */
 	plugin_list_filename(PLUGIN_LIB_DIR);
-	/* DEBUG CODE */
-	GList *print;
-	print = g_list_first(PluginList);
-	g_message("%d", g_list_length(print));
-	while (print) {
-		g_message("+++ %s +++", ((TestPlugin*)(print->data))->filename);
-		print = g_list_next(print);
+	plugins = g_list_first(PluginList);
+	while (plugins) {
+		/* plugin-list processing and completion */
+		module = g_module_open(((TestPlugin*)(plugins->data))->filename, G_MODULE_BIND_LAZY);
+		((TestPlugin*)(plugins->data))->name = g_module_name(module);
+		if (!g_module_symbol(module, "plugin_load", &((TestPlugin*)(plugins->data))->plugin_load)) /* store pointer for plugin function */
+		g_module_close(module);
+		plugins = g_list_next(plugins); /* next plugin */
 	}
-	/* DEBUG END */
 	g_free(plugindir);
 	return TRUE;
 }
