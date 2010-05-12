@@ -69,6 +69,8 @@ gboolean plugin_loader() {
 		homedir = g_get_home_dir();
 	plugindir = g_strconcat(homedir, PLUGIN_HOME_DIR, NULL);
 	plugin_list_filename(plugindir);
+	/* scanning PACKAGE_LIB_DIR"/gbraintester/plugins/ */
+	plugin_list_filename(PLUGIN_LIB_DIR);
 	/* DEBUG CODE */
 	GList *print;
 	print = g_list_first(PluginList);
