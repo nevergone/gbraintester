@@ -23,5 +23,3 @@
 
 GtkBuilder *builder;
 
-void positioning_start();
-void positioning_stop();

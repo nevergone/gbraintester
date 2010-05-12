@@ -24,19 +24,3 @@
 #include "positioning.h"
 
 
-/* start positioning test */
-void positioning_start() {
-	GtkWidget *tblPosElement;
-
-	tblPosElement = GTK_WIDGET (gtk_builder_get_object(builder, "tblPosElement"));
-	gtk_widget_set_sensitive(tblPosElement, TRUE);
-}
-
-
-/* stop positioning test */
-void positioning_stop() {
-	GtkWidget *tblPosElement;
-
-	tblPosElement = GTK_WIDGET (gtk_builder_get_object(builder, "tblPosElement"));
-	gtk_widget_set_sensitive(tblPosElement, FALSE);
-}
