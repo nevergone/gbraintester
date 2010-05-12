@@ -52,6 +52,8 @@ GList * plugin_list_filename (const gchar *path) {
 
 gboolean plugin_loader() {
 	gchar *module_path;
+	gchar *homedir;
+	gchar *plugindir;
 	GModule *module;
 	gboolean module_result;
 	gboolean (*module_func) (void);
@@ -60,5 +62,21 @@ gboolean plugin_loader() {
 	if (!g_module_supported())  {
 		return FALSE;
 	}
+	/* scanning $HOME/.gbraintester/plugins/ */
+	homedir = g_getenv("HOME");
+	if (!homedir)
+		homedir = g_get_home_dir();
+	plugindir = g_strconcat(homedir, PLUGIN_HOME_DIR, NULL);
+	plugin_list_filename(plugindir);
+	/* DEBUG CODE */
+	GList *print;
+	print = g_list_first(PluginList);
+	g_message("%d", g_list_length(print));
+	while (print) {
+		g_message("+++ %s +++", ((TestPlugin*)(print->data))->filename);
+		print = g_list_next(print);
+	}
+	/* DEBUG END */
+	g_free(plugindir);
 	return TRUE;
 }
