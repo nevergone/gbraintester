@@ -24,6 +24,12 @@
 GtkBuilder *builder;
 
 
+G_MODULE_EXPORT extern GtkWidget * plugin_page ();
+
+G_MODULE_EXPORT extern GtkWidget * plugin_about ();
+
+G_MODULE_EXPORT extern GtkWidget * plugin_settings ();
+
 G_MODULE_EXPORT extern gboolean plugin_load ();
 
 G_MODULE_EXPORT extern gboolean plugin_unload ();

@@ -24,6 +24,24 @@
 #include "reactiontime.h"
 
 
+/* result plugin test page */
+G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
+	return NULL;
+}
+
+
+/* result plugin about window */
+G_MODULE_EXPORT extern GtkWidget * plugin_about ()  {
+	return NULL;
+}
+
+
+/* result plugin settings window */
+G_MODULE_EXPORT extern GtkWidget * plugin_settings ()  {
+	return NULL;
+}
+
+
 /* plugin load function */
 G_MODULE_EXPORT extern gboolean plugin_load ()  {
 	return TRUE;
