@@ -29,7 +29,7 @@ typedef struct _Plugin_ {
 	gchar *filename; /* plugin filename */
 	gchar *version; /* plugin version */
 	gchar *title; /* plugin tab title */
-	guchar timer; /* timer in seconds, 0 = no timer */
+	guint timer; /* timer in seconds, 0 = no timer */
 	GtkWidget *page; /* test page for main application */
 	GtkWidget *about; /* about window (type: GtkAboutDialog) */
 	GtkWidget *settings; /* plugin settings window */
