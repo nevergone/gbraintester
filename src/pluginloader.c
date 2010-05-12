@@ -23,6 +23,7 @@
 
 #include "pluginloader.h"
 
+
 /* reading "path" directory, and results list with plugin filename */
 GList * plugin_list_filename (const gchar *path) {
 	GError *error = NULL;
