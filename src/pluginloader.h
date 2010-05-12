@@ -19,11 +19,14 @@
 
 #include <gtk/gtk.h>
 
+#define PLUGIN_HOME_DIR "/.gbraintester/plugins/"
+#define PLUGIN_LIB_DIR PACKAGE_LIB_DIR"/gbraintester/plugins/"
 
 GList *PluginList;
 
 typedef struct _Plugin_ {
 	gchar *name; /* plugin name */
+	gchar *filename; /* plugin filename */
 	gchar *version; /* plugin version */
 	gchar *title; /* plugin tab title */
 	guchar timer; /* timer in seconds, 0 = no timer */
