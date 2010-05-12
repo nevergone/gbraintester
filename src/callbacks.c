@@ -109,8 +109,3 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 void on_ntbTestTabs_switch_page (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data) {
 	g_signal_stop_emission_by_name(notebook, "switch-page"); /* stop signal emission: disable switch page */
 }
-
-
-/* clicked radiobutton in positioning test */
-gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data) {
-}

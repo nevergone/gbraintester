@@ -38,4 +38,3 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data);
 
 void on_ntbTestTabs_switch_page  (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data);
 
-gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data);
