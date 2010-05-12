@@ -23,7 +23,9 @@ gbraintester_SOURCES = \
 	callbacks.c \
 	callbacks.h \
 	timer.c \
-	timer.h
+	timer.h \
+	pluginloader.c \
+	pluginloader.h
 
 gbraintester_LDFLAGS = \
 	-Wl,--export-dynamic
