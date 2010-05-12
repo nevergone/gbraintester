@@ -25,6 +25,11 @@
 
 
 gboolean plugin_loader() {
+	gchar *module_path;
+	GModule *module;
+	gboolean module_result;
+	gboolean (*module_func) (void);
+
 	/* if plugins not supported */
 	if (!g_module_supported())  {
 		return FALSE;
