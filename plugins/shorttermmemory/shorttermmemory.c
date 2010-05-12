@@ -28,3 +28,27 @@
 G_MODULE_EXPORT extern gboolean plugin_load ()  {
 	return TRUE;
 }
+
+
+/* plugin unload function */
+G_MODULE_EXPORT extern gboolean plugin_unload ()  {
+	return TRUE;
+}
+
+
+/* test start function */
+G_MODULE_EXPORT extern gboolean test_start ()  {
+	return TRUE;
+}
+
+
+/* test stop function */
+G_MODULE_EXPORT extern gboolean test_stop ()  {
+	return TRUE;
+}
+
+
+/* if "test running" function */
+G_MODULE_EXPORT extern gboolean test_running ()  {
+	return TRUE;
+}
