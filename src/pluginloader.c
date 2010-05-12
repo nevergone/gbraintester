@@ -25,7 +25,7 @@
 
 
 /* reading "path" directory, and results list with plugin filename */
-GList * plugin_list_filename (const gchar *path) {
+void plugin_list_filename (const gchar *path) {
 	GDir *dir;
 	const gchar *filename;
 	TestPlugin *PluginEntity;
