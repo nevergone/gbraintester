@@ -21,3 +21,4 @@
 #include <gtk/gtk.h>
 
 
+G_MODULE_EXPORT extern gboolean plugin_load ();

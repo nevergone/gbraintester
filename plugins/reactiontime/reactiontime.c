@@ -24,3 +24,7 @@
 #include "reactiontime.h"
 
 
+/* plugin load function */
+G_MODULE_EXPORT extern gboolean plugin_load ()  {
+	return TRUE;
+}

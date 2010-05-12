@@ -23,3 +23,5 @@
 
 GtkBuilder *builder;
 
+
+G_MODULE_EXPORT extern gboolean plugin_load ();
