@@ -23,6 +23,32 @@
 
 #include "pluginloader.h"
 
+/* reading "path" directory, and results list with plugin filename */
+GList * plugin_list_filename (const gchar *path) {
+	GError *error = NULL;
+	GDir *dir;
+	const gchar *filename;
+	TestPlugin *PluginEntity;
+
+	dir = g_dir_open(path, 0, &error);
+	if (!dir) { /* if not success */
+		g_warning("%s", error->message);
+		g_error_free(error);
+		return NULL;
+	}
+	while ((filename = g_dir_read_name(dir))) { /* get file name in directory */
+		if (!g_str_has_suffix(filename, G_MODULE_SUFFIX)) /* if not module */
+			continue;
+		/* create plugin entity */
+		PluginEntity = g_new0(TestPlugin, 1);
+		/* copy filename */
+		PluginEntity->filename = g_malloc0(strlen(path)+strlen(filename));
+		PluginEntity->filename = g_strconcat(path, filename, NULL);
+		/* append plugin list */
+		PluginList = g_list_append(PluginList, PluginEntity);
+	}
+	g_dir_close(dir);
+}
 
 gboolean plugin_loader() {
 	gchar *module_path;

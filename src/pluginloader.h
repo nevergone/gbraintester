@@ -41,4 +41,6 @@ typedef struct _Plugin_ {
 } TestPlugin;
 
 
+GList * plugin_list_filename (const gchar *path);
+
 gboolean plugin_loader();
