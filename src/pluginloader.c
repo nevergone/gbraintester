@@ -69,6 +69,9 @@ gboolean plugin_loader() {
 		module = g_module_open(((TestPlugin*)(plugins->data))->filename, G_MODULE_BIND_LAZY);
 		((TestPlugin*)(plugins->data))->name = g_module_name(module);
 		 /* store plugin function pointers */
+		g_module_symbol(module, "plugin_page", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_page);
+		g_module_symbol(module, "plugin_about", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_about);
+		g_module_symbol(module, "plugin_settings", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_page);
 		g_module_symbol(module, "plugin_load", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_load);
 		g_module_symbol(module, "plugin_unload", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_unload);
 		g_module_symbol(module, "test_start", (gpointer*)&((TestPlugin*)(plugins->data))->test_start);
