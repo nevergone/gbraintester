@@ -70,6 +70,10 @@ gboolean plugin_loader() {
 		((TestPlugin*)(plugins->data))->name = g_module_name(module);
 		 /* store plugin function pointers */
 		g_module_symbol(module, "plugin_load", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_load);
+		g_module_symbol(module, "plugin_unload", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_unload);
+		g_module_symbol(module, "test_start", (gpointer*)&((TestPlugin*)(plugins->data))->test_start);
+		g_module_symbol(module, "test_stop", (gpointer*)&((TestPlugin*)(plugins->data))->test_stop);
+		g_module_symbol(module, "test_running", (gpointer*)&((TestPlugin*)(plugins->data))->test_running);
 		g_module_close(module);
 		plugins = g_list_next(plugins); /* next plugin */
 	}
