@@ -95,13 +95,16 @@ int main (int argc, char *argv[]) {
 	if (!program_init()) {
 		/* error in program initialization */
 	    g_error (_("exiting"));
+		program_destroy();
 	    return EXIT_FAILURE;
 	}
 	if (!plugin_loader()) {
 		/* plugins does not work */
 	    g_error (_("module not supported"));
+		program_destroy();
 	    return EXIT_FAILURE;
 	}
 	gtk_main();
+	program_destroy();
 	return 0;
 }
