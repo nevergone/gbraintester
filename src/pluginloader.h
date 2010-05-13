@@ -50,3 +50,5 @@ typedef struct _Plugin_ {
 void plugin_list_filename (const gchar *path);
 
 gboolean plugin_list_create ();
+
+gboolean plugin_loader ();

@@ -104,6 +104,12 @@ int main (int argc, char *argv[]) {
 		program_destroy();
 	    return EXIT_FAILURE;
 	}
+	if (!plugin_loader()) {
+		/* plugin loader does not work */
+	    g_error (_("error: plugin loader"));
+		program_destroy();
+	    return EXIT_FAILURE;
+	}
 	gtk_main();
 	program_destroy();
 	return 0;

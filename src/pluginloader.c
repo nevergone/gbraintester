@@ -85,3 +85,9 @@ gboolean plugin_list_create () {
 	g_free(plugindir);
 	return TRUE;
 }
+
+
+/* calling enabled plugins "plugin_load" function */
+gboolean plugin_loader () {
+	return TRUE;
+}
