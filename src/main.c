@@ -58,7 +58,7 @@
 /* #define UI_FILE PACKAGE_DATA_DIR"/gbraintester/ui/gbraintester.ui" */
 #define UI_FILE "src/gbraintester.ui"
 	
-GtkWidget* create_wndMain (void) {
+gboolean init_program (void) {
 	GtkWidget *wndMain;
 	GError* error = NULL;
 
@@ -84,7 +84,7 @@ int main (int argc, char *argv[]) {
 #endif
 	gtk_set_locale();
 	gtk_init(&argc, &argv);
-	window = create_wndMain();
+	init_program();
 	gtk_widget_show(window);
 	if (!plugin_loader()) { /* plugins does not work */
 	    g_error (_("module not supported"));
