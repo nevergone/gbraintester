@@ -72,7 +72,7 @@ gboolean plugin_list_create () {
 		/* store plugin function pointers */
 		g_module_symbol(module, "plugin_page", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_page);
 		g_module_symbol(module, "plugin_about", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_about);
-		g_module_symbol(module, "plugin_settings", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_page);
+		g_module_symbol(module, "plugin_settings", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_settings);
 		g_module_symbol(module, "plugin_load", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_load);
 		g_module_symbol(module, "plugin_unload", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_unload);
 		g_module_symbol(module, "plugin_timer", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_timer);
