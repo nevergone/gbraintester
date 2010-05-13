@@ -34,6 +34,8 @@ G_MODULE_EXPORT extern gboolean plugin_load ();
 
 G_MODULE_EXPORT extern gboolean plugin_unload ();
 
+G_MODULE_EXPORT extern void plugin_timer ();
+
 G_MODULE_EXPORT extern gboolean test_start ();
 
 G_MODULE_EXPORT extern gboolean test_stop ();

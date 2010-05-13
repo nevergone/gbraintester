@@ -54,6 +54,12 @@ G_MODULE_EXPORT extern gboolean plugin_unload ()  {
 }
 
 
+/* plugin timer function */
+G_MODULE_EXPORT extern void plugin_timer ()  {
+	return TRUE;
+}
+
+
 /* test start function */
 G_MODULE_EXPORT extern gboolean test_start ()  {
 	return TRUE;
