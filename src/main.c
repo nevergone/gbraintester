@@ -57,7 +57,8 @@
 /* For testing propose use the local (not installed) ui file */
 /* #define UI_FILE PACKAGE_DATA_DIR"/gbraintester/ui/gbraintester.ui" */
 #define UI_FILE "src/gbraintester.ui"
-	
+
+
 gboolean init_program (void) {
 	GtkWidget *wndMain;
 	GError* error = NULL;
@@ -77,7 +78,6 @@ gboolean init_program (void) {
 
 
 int main (int argc, char *argv[]) {
-
 #ifdef ENABLE_NLS
 	bindtextdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
 	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
@@ -90,7 +90,8 @@ int main (int argc, char *argv[]) {
 	    g_error (_("exiting"));
 	    return EXIT_FAILURE;
 	}
-	if (!plugin_loader()) { /* plugins does not work */
+	if (!plugin_loader()) {
+		/* plugins does not work */
 	    g_error (_("module not supported"));
 	    return EXIT_FAILURE;
 	}
