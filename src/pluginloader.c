@@ -45,7 +45,8 @@ void plugin_list_filename (const gchar *path) {
 	g_dir_close(dir);
 }
 
-gboolean plugin_loader() {
+
+gboolean plugin_list_create () {
 	gchar *homedir;
 	gchar *plugindir;
 	GModule *module;

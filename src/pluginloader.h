@@ -49,4 +49,4 @@ typedef struct _Plugin_ {
 
 void plugin_list_filename (const gchar *path);
 
-gboolean plugin_loader();
+gboolean plugin_list_create ();

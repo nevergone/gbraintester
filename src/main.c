@@ -98,7 +98,7 @@ int main (int argc, char *argv[]) {
 		program_destroy();
 	    return EXIT_FAILURE;
 	}
-	if (!plugin_loader()) {
+	if (!plugin_list_create()) {
 		/* plugins does not work */
 	    g_error (_("module not supported"));
 		program_destroy();
