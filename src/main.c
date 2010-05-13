@@ -77,6 +77,12 @@ gboolean program_init (void) {
 }
 
 
+/* destroy program, allocated memories and resources */
+void program_destroy (void) {
+	/* TODO */
+}
+
+
 int main (int argc, char *argv[]) {
 #ifdef ENABLE_NLS
 	bindtextdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
