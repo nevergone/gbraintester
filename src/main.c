@@ -66,16 +66,17 @@ gboolean init_program (void) {
 	if (!gtk_builder_add_from_file(builder, UI_FILE, &error)) {
 		g_warning(_("Couldn't load builder file: %s"), error->message);
 		g_error_free(error);
+		return FALSE;
 	}
 	/* This is important */
 	gtk_builder_connect_signals(builder, NULL);
 	wndMain = GTK_WIDGET (gtk_builder_get_object(builder, "wndMain"));
-	return wndMain;
+	gtk_widget_show(wndMain);
+	return TRUE;
 }
 
 
 int main (int argc, char *argv[]) {
- 	GtkWidget *window;
 
 #ifdef ENABLE_NLS
 	bindtextdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -84,8 +85,11 @@ int main (int argc, char *argv[]) {
 #endif
 	gtk_set_locale();
 	gtk_init(&argc, &argv);
-	init_program();
-	gtk_widget_show(window);
+	if (!init_program()) {
+		/* error in program initialization */
+	    g_error (_("exiting"));
+	    return EXIT_FAILURE;
+	}
 	if (!plugin_loader()) { /* plugins does not work */
 	    g_error (_("module not supported"));
 	    return EXIT_FAILURE;
