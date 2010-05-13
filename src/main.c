@@ -64,7 +64,7 @@ GtkWidget* create_wndMain (void) {
 
 	builder = gtk_builder_new();
 	if (!gtk_builder_add_from_file(builder, UI_FILE, &error)) {
-		g_warning("Couldn't load builder file: %s", error->message);
+		g_warning(_("Couldn't load builder file: %s"), error->message);
 		g_error_free(error);
 	}
 	/* This is important */
@@ -87,7 +87,7 @@ int main (int argc, char *argv[]) {
 	window = create_wndMain();
 	gtk_widget_show(window);
 	if (!plugin_loader()) { /* plugins does not work */
-	    g_error ("module not supported");
+	    g_error (_("module not supported"));
 	    return EXIT_FAILURE;
 	}
 	gtk_main();
