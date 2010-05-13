@@ -79,6 +79,8 @@ gboolean plugin_list_create () {
 		g_module_symbol(module, "test_start", (gpointer*)&((TestPlugin*)(plugins->data))->test_start);
 		g_module_symbol(module, "test_stop", (gpointer*)&((TestPlugin*)(plugins->data))->test_stop);
 		g_module_symbol(module, "test_running", (gpointer*)&((TestPlugin*)(plugins->data))->test_running);
+		/* all plugins enabled */
+		((TestPlugin*)(plugins->data))->enabled = TRUE;
 		g_module_close(module);
 		plugins = g_list_next(plugins); /* next plugin */
 	}
