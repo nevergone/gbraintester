@@ -59,6 +59,7 @@
 #define UI_FILE "src/gbraintester.ui"
 
 
+/* program initialization, memory allocation, etc. */
 gboolean program_init (void) {
 	GtkWidget *wndMain;
 	GError* error = NULL;
