@@ -59,7 +59,7 @@
 #define UI_FILE "src/gbraintester.ui"
 
 
-gboolean init_program (void) {
+gboolean program_init (void) {
 	GtkWidget *wndMain;
 	GError* error = NULL;
 
@@ -85,7 +85,7 @@ int main (int argc, char *argv[]) {
 #endif
 	gtk_set_locale();
 	gtk_init(&argc, &argv);
-	if (!init_program()) {
+	if (!program_init()) {
 		/* error in program initialization */
 	    g_error (_("exiting"));
 	    return EXIT_FAILURE;
