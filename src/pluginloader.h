@@ -38,9 +38,9 @@ typedef struct _Plugin_ {
 	GtkWidget *(*plugin_page) (void); /* test page for main application */
 	GtkWidget *(*plugin_about) (void); /* about window (type: GtkAboutDialog) */
 	GtkWidget *(*plugin_settings) (void); /* plugin settings window */
-	gboolean (*plugin_load) (void); /* test plugin load function, TRUE = success */
-	gboolean (*plugin_unload) (void); /* test plugin unload function, TRUE = success */
-	void (*plugin_timer) (void); /* test plugin timer function */
+	gboolean (*plugin_load) (void); /* plugin load function, TRUE = success */
+	gboolean (*plugin_unload) (void); /* plugin unload function, TRUE = success */
+	void (*plugin_timer) (void); /* plugin timer function */
 	gboolean (*test_start) (void); /* test start function, TRUE = success */
 	gboolean (*test_stop) (void); /* test stop function, TRUE = success */
 	gboolean (*test_running) (void); /* test running? TRUE = running */
