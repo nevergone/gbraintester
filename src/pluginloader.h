@@ -29,10 +29,10 @@
 GList *PluginList;
 
 typedef struct _Plugin_ {
-	gchar *name; /* plugin name */
-	gchar *filename; /* plugin filename */
-	gchar *version; /* plugin version */
-	gchar *title; /* plugin tab title */
+	const gchar *name; /* plugin name */
+	const gchar *filename; /* plugin filename */
+	const gchar *version; /* plugin version */
+	const gchar *title; /* plugin tab title */
 	gboolean enabled; /* if TRUE, plugin enabled */
 	guint timer; /* timer in seconds, 0 = no timer */
 	GtkWidget *(*plugin_page) (void); /* test page for main application */
