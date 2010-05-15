@@ -97,18 +97,19 @@ gboolean plugin_loader () {
 
 	plugins = g_list_first(PluginList);
 	while (plugins) {
-		/* if enabled plugin, calling "plugin_load" function */
+		/* if enabled plugin, open module ... */
 		if (((TestPlugin*)(plugins->data))->enabled) {
+			module = g_module_open(((TestPlugin*)(plugins->data))->filename, G_MODULE_BIND_LAZY);
+			/* ... calling "plugin_load" function */
 			if (((TestPlugin*)(plugins->data))->plugin_load) {
-				/* open module, run function and close module */
-				module = g_module_open(((TestPlugin*)(plugins->data))->filename, G_MODULE_BIND_LAZY);
 				result = ((TestPlugin*)(plugins->data))->plugin_load();
-				g_module_close(module);
 				if (!result) {
 					/* plugin load error */
 					return FALSE;
 				}
 			}
+			/* close module */
+			g_module_close(module);
 		}
 		plugins = g_list_next(plugins); /* next plugin */
 	}
