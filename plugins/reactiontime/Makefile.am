@@ -8,6 +8,10 @@ INCLUDES = 							\
 	$(WARN_CFLAGS)						\
 	$(DISABLE_DEPRECATED_CFLAGS)				
 
+CPPFLAGS =                                      \
+	-DPLUGIN_GLADE_DIR=\""$(gladedir)"\"    \
+	$(GBRAINTESTER_CFLAGS)
+
 plugin_LTLIBRARIES = libreactiontime.la
 
 libreactiontime_la_SOURCES = reactiontime.c \

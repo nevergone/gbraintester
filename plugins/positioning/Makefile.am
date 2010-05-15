@@ -8,6 +8,10 @@ INCLUDES = 							\
 	$(WARN_CFLAGS)						\
 	$(DISABLE_DEPRECATED_CFLAGS)				
 
+CPPFLAGS =                                      \
+	-DPLUGIN_GLADE_DIR=\""$(gladedir)"\"    \
+	$(GBRAINTESTER_CFLAGS)
+
 plugin_LTLIBRARIES = libpositioning.la
 
 libpositioning_la_SOURCES = positioning.c \
