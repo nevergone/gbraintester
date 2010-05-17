@@ -26,11 +26,6 @@
 #define UI_FILE PLUGIN_GLADE_DIR"/reactiontime.ui"
 
 
-G_MODULE_EXPORT extern const gchar title[] = "Reaction time";
-
-G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
-
-
 /* result plugin test page */
 G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
 	GtkBuilder *builder;

@@ -21,6 +21,10 @@
 #include <gtk/gtk.h>
 
 
+G_MODULE_EXPORT extern const gchar title[] = "Short-term memory";
+
+G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
+
 GtkBuilder *builder;
 
 
