@@ -25,6 +25,8 @@ G_MODULE_EXPORT extern const gchar title[] = "Positioning";
 
 G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
 
+G_MODULE_EXPORT extern guint timer = 60;
+
 GtkBuilder *builder;
 
 
