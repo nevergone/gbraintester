@@ -14,8 +14,9 @@ CPPFLAGS =                                      \
 
 plugin_LTLIBRARIES = libshorttermmemory.la
 
-libshorttermmemory_la_SOURCES = shorttermmemory.c \
-				shorttermmemory.h
+libshorttermmemory_la_SOURCES = \
+  shorttermmemory.c \
+  shorttermmemory.h
 
 libshorttermmemory_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 

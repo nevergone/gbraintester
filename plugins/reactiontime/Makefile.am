@@ -14,8 +14,9 @@ CPPFLAGS =                                      \
 
 plugin_LTLIBRARIES = libreactiontime.la
 
-libreactiontime_la_SOURCES = reactiontime.c \
-				reactiontime.h
+libreactiontime_la_SOURCES = \
+  reactiontime.c \
+  reactiontime.h
 
 libreactiontime_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 
