@@ -20,4 +20,4 @@
 #include <gtk/gtk.h>
 
 
-
+G_MODULE_EXPORT extern gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data);
