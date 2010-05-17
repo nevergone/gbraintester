@@ -15,7 +15,9 @@ CPPFLAGS =                                      \
 plugin_LTLIBRARIES = libpositioning.la
 
 libpositioning_la_SOURCES = positioning.c \
-				positioning.h
+				positioning.h \
+				callbacks.c \
+				callbacks.h
 
 libpositioning_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
 
