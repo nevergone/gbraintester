@@ -21,6 +21,9 @@
 #include <gtk/gtk.h>
 
 
+GtkBuilder *builder;
+
+
 G_MODULE_EXPORT extern GtkWidget * plugin_page ();
 
 G_MODULE_EXPORT extern GtkWidget * plugin_about ();
