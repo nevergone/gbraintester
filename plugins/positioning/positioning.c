@@ -23,10 +23,29 @@
 
 #include "positioning.h"
 
+#define UI_FILE PLUGIN_GLADE_DIR"/positioning.ui"
+
+
+G_MODULE_EXPORT extern const gchar title[] = "Positioning";
+
+G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
+
 
 /* result plugin test page */
 G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
-	return NULL;
+	GtkBuilder *builder;
+	GtkWidget *page;
+	GError* error = NULL;
+
+	builder = gtk_builder_new();
+	if (!gtk_builder_add_from_file(builder, UI_FILE, &error)) {
+		g_warning(_("Couldn't load builder file: %s"), error->message);
+		g_error_free(error);
+		return NULL;
+	}
+	gtk_builder_connect_signals(builder, NULL);
+	page = GTK_WIDGET (gtk_builder_get_object(builder, "plugin_top"));
+	return page;
 }
 
 
