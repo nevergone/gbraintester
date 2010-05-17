@@ -123,10 +123,10 @@ gboolean plugin_loader () {
 					g_warning("plugin page error");
 					return FALSE;
 				}
-			}
-			if (((TestPlugin*)(plugins->data))->title) {
-				title = gtk_label_new(((TestPlugin*)(plugins->data))->title);
-				gtk_notebook_append_page(GTK_NOTEBOOK (notebook), page, title);
+				if (((TestPlugin*)(plugins->data))->title) {
+					title = gtk_label_new(((TestPlugin*)(plugins->data))->title);
+					gtk_notebook_append_page(GTK_NOTEBOOK (notebook), page, title);
+				}
 			}
 			/* close module */
 			g_module_close(module);
