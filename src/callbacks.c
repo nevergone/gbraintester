@@ -23,8 +23,6 @@
 
 #include "callbacks.h"
 
-#define TIMER "60"
-
 
 /* destroy application window */
 void on_wndMain_destroy (GtkWidget *widget, gpointer data) {

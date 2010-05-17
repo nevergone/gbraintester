@@ -24,10 +24,6 @@
 #include "timer.h"
 
 
-/* in callback.c: TIMER - 1 */
-#define TIMER "59"
-
-
 /* run function by the seconds */
 gint estimatedTime (gpointer user_data) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
