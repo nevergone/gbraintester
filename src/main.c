@@ -59,6 +59,9 @@
 #define UI_FILE "src/gbraintester.ui"
 
 
+extern GtkBuilder *builder;
+
+
 /* program initialization, memory allocation, etc. */
 gboolean program_init (void) {
 	GtkWidget *wndMain;

@@ -79,6 +79,9 @@ gboolean plugin_list_create () {
 		g_module_symbol(module, "test_start", (gpointer*)&((TestPlugin*)(plugins->data))->test_start);
 		g_module_symbol(module, "test_stop", (gpointer*)&((TestPlugin*)(plugins->data))->test_stop);
 		g_module_symbol(module, "test_running", (gpointer*)&((TestPlugin*)(plugins->data))->test_running);
+		/* store plugin version and title pointer */
+		g_module_symbol(module, "version", (gpointer*)&((TestPlugin*)(plugins->data))->version);
+		g_module_symbol(module, "title", (gpointer*)&((TestPlugin*)(plugins->data))->title);
 		/* all plugins enabled */
 		((TestPlugin*)(plugins->data))->enabled = TRUE;
 		g_module_close(module);
@@ -94,7 +97,9 @@ gboolean plugin_loader () {
 	GList *plugins;
 	GModule *module;
 	gboolean result = TRUE;
+	GtkWidget *page = NULL, *title = NULL, *notebook = NULL;
 
+	notebook = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
 	plugins = g_list_first(PluginList);
 	while (plugins) {
 		/* if enabled plugin, open module ... */
@@ -105,8 +110,22 @@ gboolean plugin_loader () {
 				result = ((TestPlugin*)(plugins->data))->plugin_load();
 				if (!result) {
 					/* plugin load error */
+					g_warning("plugin load error");
 					return FALSE;
 				}
+			}
+			/* calling "plugin_page" function, and create test page */
+			if (((TestPlugin*)(plugins->data))->plugin_page) {
+				page = ((TestPlugin*)(plugins->data))->plugin_page();
+				if (!page) {
+					/* plugin page error */
+					g_warning("plugin page error");
+					return FALSE;
+				}
+			}
+			if (((TestPlugin*)(plugins->data))->title) {
+				title = gtk_label_new(((TestPlugin*)(plugins->data))->title);
+				gtk_notebook_append_page(GTK_NOTEBOOK (notebook), page, title);
 			}
 			/* close module */
 			g_module_close(module);
