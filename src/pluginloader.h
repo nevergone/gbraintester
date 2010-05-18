@@ -41,7 +41,7 @@ typedef struct _Plugin_ {
 	GtkWidget *(*plugin_settings) (void); /* plugin settings window */
 	gboolean (*plugin_load) (void); /* plugin load function, TRUE = success */
 	gboolean (*plugin_unload) (void); /* plugin unload function, TRUE = success */
-	guint (*plugin_get_timer) (void) /* set plugin timer value in seconds, 0 = no timer */
+	guint (*plugin_get_timer) (void); /* set plugin timer value in seconds, 0 = no timer */
 	void (*plugin_timer) (guint timer_value); /* plugin timer function, timer_value: estimated time in seconds */
 	gboolean (*test_start) (void); /* test start function, TRUE = success */
 	gboolean (*test_stop) (void); /* test stop function, TRUE = success */
