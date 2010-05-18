@@ -46,6 +46,7 @@ typedef struct _Plugin_ {
 	gboolean (*test_start) (void); /* test start function, TRUE = success */
 	gboolean (*test_stop) (void); /* test stop function, TRUE = success */
 	gboolean (*test_running) (void); /* test running? TRUE = running */
+	GtkWidget *page; /* stored plugin page pointer */
 } TestPlugin;
 
 

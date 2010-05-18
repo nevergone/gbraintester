@@ -127,6 +127,7 @@ gboolean plugin_loader () {
 					title = gtk_label_new(((TestPlugin*)(plugins->data))->title);
 					gtk_notebook_append_page(GTK_NOTEBOOK (notebook), page, title);
 				}
+				((TestPlugin*)(plugins->data))->page = page; /* stored plugin page pointer */
 			}
 			/* close module */
 			g_module_close(module);
