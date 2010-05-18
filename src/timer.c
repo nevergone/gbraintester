@@ -58,6 +58,7 @@ gint estimatedTime (gpointer user_data) {
 										GTK_ICON_SIZE_BUTTON);
 			/* stop test */
 			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
+			g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
 			tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
 			switch (tab_id) {
 				case 0:

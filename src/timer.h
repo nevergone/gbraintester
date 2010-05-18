@@ -19,6 +19,7 @@
 
 #include <stdlib.h>
 #include <gtk/gtk.h>
+#include "callbacks.h"
 
 
 GtkBuilder *builder;
