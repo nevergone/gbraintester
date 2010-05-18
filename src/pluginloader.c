@@ -75,14 +75,14 @@ gboolean plugin_list_create () {
 		g_module_symbol(module, "plugin_settings", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_settings);
 		g_module_symbol(module, "plugin_load", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_load);
 		g_module_symbol(module, "plugin_unload", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_unload);
+		g_module_symbol(module, "plugin_get_timer", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_get_timer);
 		g_module_symbol(module, "plugin_timer", (gpointer*)&((TestPlugin*)(plugins->data))->plugin_timer);
 		g_module_symbol(module, "test_start", (gpointer*)&((TestPlugin*)(plugins->data))->test_start);
 		g_module_symbol(module, "test_stop", (gpointer*)&((TestPlugin*)(plugins->data))->test_stop);
 		g_module_symbol(module, "test_running", (gpointer*)&((TestPlugin*)(plugins->data))->test_running);
-		/* store plugin version, title pointer and timer */
+		/* store plugin version and title pointer */
 		g_module_symbol(module, "version", (gpointer*)&((TestPlugin*)(plugins->data))->version);
 		g_module_symbol(module, "title", (gpointer*)&((TestPlugin*)(plugins->data))->title);
-		g_module_symbol(module, "timer", (gpointer*)&((TestPlugin*)(plugins->data))->timer);
 		/* all plugins enabled */
 		((TestPlugin*)(plugins->data))->enabled = TRUE;
 		g_module_close(module);

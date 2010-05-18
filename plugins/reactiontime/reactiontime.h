@@ -25,8 +25,6 @@ G_MODULE_EXPORT extern const gchar title[] = "Reaction time";
 
 G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
 
-G_MODULE_EXPORT extern guint timer = 0;
-
 GtkBuilder *builder;
 
 
@@ -39,6 +37,8 @@ G_MODULE_EXPORT extern GtkWidget * plugin_settings ();
 G_MODULE_EXPORT extern gboolean plugin_load ();
 
 G_MODULE_EXPORT extern gboolean plugin_unload ();
+
+G_MODULE_EXPORT extern guint plugin_get_timer ();
 
 G_MODULE_EXPORT extern void plugin_timer (guint timer_value);
 
