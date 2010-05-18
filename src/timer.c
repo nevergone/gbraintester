@@ -28,7 +28,7 @@
 
 
 /* run function by the seconds */
-gint estimatedTime (gpointer user_data) {
+gboolean estimatedTime (gpointer user_data) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];
