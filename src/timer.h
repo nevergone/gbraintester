@@ -32,7 +32,7 @@ guint timerId;
 gboolean test_running;
 
 
-gint estimatedTime (gpointer plugin);
+gboolean estimatedTime (gpointer plugin);
 
 
 #endif /* _TIMER_H_ */

@@ -25,7 +25,7 @@
 
 
 /* run function by the seconds */
-gint estimatedTime (gpointer plugin) {
+gboolean estimatedTime (gpointer plugin) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];
