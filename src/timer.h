@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _TIMER_H_
+#define _TIMER_H_
+
+
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
@@ -26,3 +30,6 @@ guint timerId;
 
 
 gint estimatedTime (gpointer user_data);
+
+
+#endif /* _TIMER_H_ */

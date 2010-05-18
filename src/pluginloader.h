@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _PLUGINLOADER_H_
+#define _PLUGINLOADER_H_
+
+
 #include <string.h>
 #include <gtk/gtk.h>
 
@@ -55,3 +59,6 @@ void plugin_list_filename (const gchar *path);
 gboolean plugin_list_create ();
 
 gboolean plugin_loader ();
+
+
+#endif /* _PLUGINLOADER_H_ */

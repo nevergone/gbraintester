@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _CALLBACKS_H_
+#define _CALLBACKS_H_
+
+
 #include <gtk/gtk.h>
 #include <strings.h>
 
@@ -38,3 +42,5 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data);
 
 void on_ntbTestTabs_switch_page  (GtkNotebook *notebook, GtkNotebookPage *page, guint page_num, gpointer user_data);
 
+
+#endif /* _CALLBACKS_H_ */
