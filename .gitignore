@@ -40,3 +40,4 @@ INSTALL
 depcomp
 install-sh
 missing
+src/gbraintester
