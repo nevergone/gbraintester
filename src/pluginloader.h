@@ -36,12 +36,12 @@ typedef struct _Plugin_ {
 	const gchar *version; /* plugin version */
 	const gchar *title; /* plugin tab title */
 	gboolean enabled; /* if TRUE, plugin enabled */
-	guint *timer; /* timer in seconds, 0 = no timer */
 	GtkWidget *(*plugin_page) (void); /* test page for main application */
 	GtkWidget *(*plugin_about) (void); /* about window (type: GtkAboutDialog) */
 	GtkWidget *(*plugin_settings) (void); /* plugin settings window */
 	gboolean (*plugin_load) (void); /* plugin load function, TRUE = success */
 	gboolean (*plugin_unload) (void); /* plugin unload function, TRUE = success */
+	guint (*plugin_get_timer) (void) /* timer in seconds, 0 = no timer */
 	void (*plugin_timer) (void); /* plugin timer function */
 	gboolean (*test_start) (void); /* test start function, TRUE = success */
 	gboolean (*test_stop) (void); /* test stop function, TRUE = success */
