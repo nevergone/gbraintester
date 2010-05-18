@@ -58,17 +58,27 @@ void on_btnResults_clicked (GtkButton *button, gpointer user_data) {
 
 /* clicked Start/Stop button */
 void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
-	GtkWidget *lblStartStop, *imgStartStop, *ntbTestTabs, *lblTimer;
+	GtkWidget *lblStartStop, *imgStartStop, *ntbTestTabs, *lblTimer, *plugin_page;
 	gint tab_id;
+	TestPlugin *plugin;
+	GModule *module;
+	guint timer_value;
+	gchar text[5];
 
 	lblStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "lblStartStop"));
 	imgStartStop = GTK_WIDGET (gtk_builder_get_object(builder, "imgStartStop"));
 	ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
 	lblTimer = GTK_WIDGET (gtk_builder_get_object(builder, "lblTimer"));
 	tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
-	if ((tab_id == 0) || (tab_id == 2)) { /* timer required */
+	plugin_page = gtk_notebook_get_nth_page(GTK_NOTEBOOK (ntbTestTabs), tab_id); /* get current tab page widget */
+	/* get active plugin descriptor and plugin */
+	plugin = (TestPlugin*)g_object_get_data(G_OBJECT (plugin_page), "plugin-data");
+	module = g_module_open(plugin->filename, G_MODULE_BIND_LAZY);
+	timer_value = plugin->plugin_get_timer();
+	if (timer_value != 0) { /* timer required */
 		if (!timerId) {
-			gtk_label_set_text(GTK_LABEL (lblTimer), TIMER);
+			g_sprintf(text, "%u", timer_value);
+			gtk_label_set_text(GTK_LABEL (lblTimer), text);
 			/* start estimatedTime() function by the seconds */
 			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
 		}
@@ -100,6 +110,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		/* stop test */
 		/* TODO */
 	}
+	g_module_close(module);
 }
 
 

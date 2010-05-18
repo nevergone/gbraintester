@@ -22,7 +22,9 @@
 
 
 #include <gtk/gtk.h>
+#include <glib/gprintf.h>
 #include <strings.h>
+#include "pluginloader.h"
 
 
 guint timerId;
