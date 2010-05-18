@@ -25,11 +25,12 @@
 
 
 /* run function by the seconds */
-gint estimatedTime (gpointer user_data) {
+gint estimatedTime (gpointer plugin) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];
 	int timer_number, tab_id;
+	GModule *module;
 
 	lblTimer = GTK_WIDGET (gtk_builder_get_object(builder, "lblTimer"));
 	timer_oldtext = gtk_label_get_text(GTK_LABEL (lblTimer));
@@ -53,6 +54,12 @@ gint estimatedTime (gpointer user_data) {
 			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
 			g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
 			/* stop test */
+			module = g_module_open(((TestPlugin*)plugin)->filename, G_MODULE_BIND_LAZY);
+			if (!((TestPlugin*)plugin)->test_stop()) {
+				g_warning("timer test stop error");
+			}
+			g_module_close(module);
+			test_running = FALSE;
 			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
 			tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
 			/* TODO */

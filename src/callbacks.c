@@ -80,7 +80,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 			g_sprintf(text, "%u", timer_value);
 			gtk_label_set_text(GTK_LABEL (lblTimer), text);
 			/* start estimatedTime() function by the seconds */
-			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, NULL);
+			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, plugin);
 		}
 		else {
 			/* remove timer */
@@ -98,6 +98,9 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 									GTK_ICON_SIZE_BUTTON);
 		g_signal_connect(ntbTestTabs, "switch-page", G_CALLBACK (on_ntbTestTabs_switch_page), NULL); /* signal connect */
 		/* start test */
+		if (!plugin->test_start()) {
+			g_warning("test start error");
+		}
 		/* TODO */
 	}
 	else {
@@ -108,6 +111,9 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 									GTK_ICON_SIZE_BUTTON);
 		g_signal_handlers_disconnect_by_func(ntbTestTabs, on_ntbTestTabs_switch_page, NULL); /* enable switch page */
 		/* stop test */
+		if (!plugin->test_stop()) {
+			g_warning("test stop error");
+		}
 		/* TODO */
 	}
 	g_module_close(module);

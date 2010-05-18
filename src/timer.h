@@ -24,13 +24,15 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 #include "callbacks.h"
+#include "pluginloader.h"
 
 
 GtkBuilder *builder;
 guint timerId;
+gboolean test_running;
 
 
-gint estimatedTime (gpointer user_data);
+gint estimatedTime (gpointer plugin);
 
 
 #endif /* _TIMER_H_ */
