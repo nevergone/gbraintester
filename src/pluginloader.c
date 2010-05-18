@@ -128,6 +128,7 @@ gboolean plugin_loader () {
 					gtk_notebook_append_page(GTK_NOTEBOOK (notebook), page, title);
 				}
 				((TestPlugin*)(plugins->data))->page = page; /* stored plugin page pointer */
+				g_object_set_data (G_OBJECT(page), "plugin-data", plugins); /* stored plugin data in plugin page */
 			}
 			/* close module */
 			g_module_close(module);
