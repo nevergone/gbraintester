@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _POSITIONING_H_
+#define _POSITIONING_H_
+
+
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
@@ -47,3 +51,6 @@ G_MODULE_EXPORT extern gboolean test_start ();
 G_MODULE_EXPORT extern gboolean test_stop ();
 
 G_MODULE_EXPORT extern gboolean test_running ();
+
+
+#endif /* _POSITIONING_H_ */

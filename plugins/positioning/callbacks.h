@@ -17,7 +17,14 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _CALLBACKS_H_
+#define _CALLBACKS_H_
+
+
 #include <gtk/gtk.h>
 
 
 G_MODULE_EXPORT extern gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data);
+
+
+#endif /* _CALLBACKS_H_ */
