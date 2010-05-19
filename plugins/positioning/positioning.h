@@ -24,8 +24,9 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
-#define TIMER 60
 
+#define UI_FILE PLUGIN_GLADE_DIR"/positioning.ui"
+#define TIMER 60
 
 G_MODULE_EXPORT extern const gchar title[] = "Positioning";
 

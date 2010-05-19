@@ -24,8 +24,9 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
-#define TIMER 0
 
+#define UI_FILE PLUGIN_GLADE_DIR"/shorttermmemory.ui"
+#define TIMER 0
 
 G_MODULE_EXPORT extern const gchar title[] = "Short-term memory";
 

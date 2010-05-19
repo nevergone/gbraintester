@@ -23,8 +23,6 @@
 
 #include "shorttermmemory.h"
 
-#define UI_FILE PLUGIN_GLADE_DIR"/shorttermmemory.ui"
-
 
 /* result plugin test page */
 G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
