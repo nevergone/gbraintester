@@ -70,7 +70,7 @@ G_MODULE_EXPORT extern gboolean plugin_unload ()  {
 
 /* get plugin timer value */
 G_MODULE_EXPORT extern guint plugin_get_timer () {
-	return 60;
+	return TIMER;
 }
 
 
