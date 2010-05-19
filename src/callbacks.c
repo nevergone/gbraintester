@@ -79,8 +79,8 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 		if (!timerId) {
 			g_sprintf(text, "%u", timer_value);
 			gtk_label_set_text(GTK_LABEL (lblTimer), text);
-			/* start estimatedTime() function by the seconds */
-			timerId = g_timeout_add_seconds(1, (GtkFunction)estimatedTime, plugin);
+			/* start main_application_timer() function by the seconds */
+			timerId = g_timeout_add_seconds(1, (GtkFunction)main_application_timer, plugin);
 		}
 		else {
 			/* remove timer */

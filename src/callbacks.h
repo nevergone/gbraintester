@@ -31,7 +31,7 @@ guint timerId;
 gboolean test_running;
 GtkBuilder *builder;
 
-gint estimatedTime (gpointer user_data);
+gint main_application_timer (gpointer user_data);
 
 
 void on_wndMain_destroy (GtkWidget *widget, gpointer data);
