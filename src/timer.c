@@ -60,8 +60,6 @@ gboolean estimatedTime (gpointer plugin) {
 			}
 			g_module_close(module);
 			test_running = FALSE;
-			ntbTestTabs = GTK_WIDGET (gtk_builder_get_object(builder, "ntbTestTabs"));
-			tab_id = gtk_notebook_get_current_page(GTK_NOTEBOOK (ntbTestTabs));
 			/* TODO */
 			return FALSE;
 		}
