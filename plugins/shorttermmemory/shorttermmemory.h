@@ -28,32 +28,32 @@
 #define UI_FILE PLUGIN_GLADE_DIR"/shorttermmemory.ui"
 #define TIMER 0
 
-G_MODULE_EXPORT extern const gchar title[] = "Short-term memory";
+G_MODULE_EXPORT const gchar title[] = "Short-term memory";
 
-G_MODULE_EXPORT extern const gchar version[] = "0.1-dev";
+G_MODULE_EXPORT const gchar version[] = "0.1-dev";
 
 GtkBuilder *builder;
 
 
-G_MODULE_EXPORT extern GtkWidget * plugin_page ();
+G_MODULE_EXPORT GtkWidget * plugin_page ();
 
-G_MODULE_EXPORT extern GtkWidget * plugin_about ();
+G_MODULE_EXPORT GtkWidget * plugin_about ();
 
-G_MODULE_EXPORT extern GtkWidget * plugin_settings ();
+G_MODULE_EXPORT GtkWidget * plugin_settings ();
 
-G_MODULE_EXPORT extern gboolean plugin_load ();
+G_MODULE_EXPORT gboolean plugin_load ();
 
-G_MODULE_EXPORT extern gboolean plugin_unload ();
+G_MODULE_EXPORT gboolean plugin_unload ();
 
-G_MODULE_EXPORT extern guint plugin_get_timer ();
+G_MODULE_EXPORT guint plugin_get_timer ();
 
-G_MODULE_EXPORT extern void plugin_timer (guint timer_value);
+G_MODULE_EXPORT void plugin_timer (guint timer_value);
 
-G_MODULE_EXPORT extern gboolean test_start ();
+G_MODULE_EXPORT gboolean test_start ();
 
-G_MODULE_EXPORT extern gboolean test_stop ();
+G_MODULE_EXPORT gboolean test_stop ();
 
-G_MODULE_EXPORT extern gboolean test_running ();
+G_MODULE_EXPORT gboolean test_running ();
 
 
 #endif /* _SHORTTERMMEMORY_H_ */

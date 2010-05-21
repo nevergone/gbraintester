@@ -25,6 +25,6 @@
 
 
 /* clicked radiobutton in positioning test */
-G_MODULE_EXPORT extern gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data) {
+G_MODULE_EXPORT gboolean on_rbtnPosElement_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer user_data) {
 	return FALSE;
 }

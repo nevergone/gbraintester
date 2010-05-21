@@ -25,7 +25,7 @@
 
 
 /* result plugin test page */
-G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
+G_MODULE_EXPORT GtkWidget * plugin_page ()  {
 	GtkWidget *page;
 	GError* error = NULL;
 
@@ -42,53 +42,53 @@ G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
 
 
 /* result plugin about window */
-G_MODULE_EXPORT extern GtkWidget * plugin_about ()  {
+G_MODULE_EXPORT GtkWidget * plugin_about ()  {
 	return NULL;
 }
 
 
 /* result plugin settings window */
-G_MODULE_EXPORT extern GtkWidget * plugin_settings ()  {
+G_MODULE_EXPORT GtkWidget * plugin_settings ()  {
 	return NULL;
 }
 
 
 /* plugin load function */
-G_MODULE_EXPORT extern gboolean plugin_load ()  {
+G_MODULE_EXPORT gboolean plugin_load ()  {
 	return TRUE;
 }
 
 
 /* plugin unload function */
-G_MODULE_EXPORT extern gboolean plugin_unload ()  {
+G_MODULE_EXPORT gboolean plugin_unload ()  {
 	return TRUE;
 }
 
 
 /* get plugin timer value */
-G_MODULE_EXPORT extern guint plugin_get_timer () {
+G_MODULE_EXPORT guint plugin_get_timer () {
 	return TIMER;
 }
 
 
 /* plugin timer function */
-G_MODULE_EXPORT extern void plugin_timer (guint timer_value)  {
+G_MODULE_EXPORT void plugin_timer (guint timer_value)  {
 }
 
 
 /* test start function */
-G_MODULE_EXPORT extern gboolean test_start ()  {
+G_MODULE_EXPORT gboolean test_start ()  {
 	return TRUE;
 }
 
 
 /* test stop function */
-G_MODULE_EXPORT extern gboolean test_stop ()  {
+G_MODULE_EXPORT gboolean test_stop ()  {
 	return TRUE;
 }
 
 
 /* if "test running" function */
-G_MODULE_EXPORT extern gboolean test_running ()  {
+G_MODULE_EXPORT gboolean test_running ()  {
 	return TRUE;
 }
