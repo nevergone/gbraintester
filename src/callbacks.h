@@ -29,7 +29,7 @@
 
 guint timerId;
 gboolean test_running;
-GtkBuilder *builder;
+extern GtkBuilder *builder;
 
 gint main_application_timer (gpointer user_data);
 

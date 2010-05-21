@@ -75,6 +75,7 @@ void on_btnStartStop_clicked (GtkButton *button, gpointer user_data) {
 	plugin = (TestPlugin*)g_object_get_data(G_OBJECT (plugin_page), "plugin-data");
 	module = g_module_open(plugin->filename, G_MODULE_BIND_LAZY);
 	timer_value = plugin->plugin_get_timer();
+
 	if (timer_value != 0) { /* timer required */
 		if (!timerId) {
 			g_sprintf(text, "%u", timer_value);

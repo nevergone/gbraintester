@@ -59,7 +59,7 @@
 #define UI_FILE "src/gbraintester.ui"
 
 
-extern GtkBuilder *builder;
+GtkBuilder *builder;
 
 
 /* program initialization, memory allocation, etc. */

@@ -27,9 +27,9 @@
 #include "pluginloader.h"
 
 
-GtkBuilder *builder;
-guint timerId;
-gboolean test_running;
+extern GtkBuilder *builder;
+extern guint timerId;
+extern gboolean test_running;
 
 
 gboolean main_application_timer (gpointer plugin);

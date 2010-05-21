@@ -26,7 +26,6 @@
 
 /* result plugin test page */
 G_MODULE_EXPORT extern GtkWidget * plugin_page ()  {
-	GtkBuilder *builder;
 	GtkWidget *page;
 	GError* error = NULL;
 

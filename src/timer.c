@@ -29,7 +29,7 @@ gboolean main_application_timer (gpointer plugin) {
 	GtkWidget *lblTimer, *lblStartStop, *imgStartStop, *ntbTestTabs;
 	const gchar *timer_oldtext;
 	gchar timer_newtext[3];
-	int timer_number, tab_id;
+	int timer_number;
 	GModule *module;
 
 	lblTimer = GTK_WIDGET (gtk_builder_get_object(builder, "lblTimer"));

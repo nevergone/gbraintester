@@ -30,7 +30,7 @@
 #define PLUGIN_HOME_DIR G_DIR_SEPARATOR_S".gbraintester"G_DIR_SEPARATOR_S"plugins"G_DIR_SEPARATOR_S
 #define PLUGIN_LIB_DIR PACKAGE_LIB_DIR G_DIR_SEPARATOR_S"gbraintester"G_DIR_SEPARATOR_S"plugins"G_DIR_SEPARATOR_S
 
-GtkBuilder *builder;
+extern GtkBuilder *builder;
 
 GList *PluginList;
 
